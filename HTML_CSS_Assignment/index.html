@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnLoop Academy | Courses</title>
+  <link rel="stylesheet" href="../HTML_CSS_Assignment/style.css">
+</head>
+<body>
+
+  <!-- ===== Header + Navigation (Part A) ===== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#home" class="brand">Learn<span>Loop</span></a>
+
+      <!-- CSS-only mobile menu toggle (checkbox hack) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Main content (Part D) ===== -->
+  <main id="home">
+    <section class="intro" id="about">
+      <h1>Learn Web Development, One Project at a Time</h1>
+      <p>
+        LearnLoop Academy offers short, practical courses that take you from
+        your first line of HTML to building real websites. Pick a course below
+        and start building today.
+      </p>
+    </section>
+
+    <!-- ===== Card section (Parts B & C) ===== -->
+    <section class="courses" id="courses">
+      <h2>Popular Courses</h2>
+
+      <div class="card-grid">
+
+        <article class="card">
+          <img src="https://loop-media.co/wp-content/uploads/2025/01/Complete-Guide-to-Web-Development-and-Design.jpg" alt="Web development illustration">
+          <div class="card-body">
+            <span class="tag">Web</span>
+            <h3>Web Development</h3>
+            <p>Learn HTML, CSS and JavaScript through practical projects.</p>
+            <p class="meta">Beginner &bull; 8 Weeks</p>
+            <a href="#" class="btn">View Course</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://dnmtechs.com/wp-content/uploads/2023/10/python_dnmtechs_feature_image_20022000077.jpg" alt="Python programming illustration">
+          <div class="card-body">
+            <span class="tag">Programming</span>
+            <h3>Python Basics</h3>
+            <p>Understand variables, loops and functions by solving small problems.</p>
+            <p class="meta">Beginner &bull; 6 Weeks</p>
+            <a href="#" class="btn">View Course</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://pairroxz.com/blog/wp-content/uploads/2023/01/Examples-of-uiux-Design.png" alt="UI design illustration">
+          <div class="card-body">
+            <span class="tag">Design</span>
+            <h3>UI/UX Design</h3>
+            <p>Design clean interfaces and learn how people use websites and apps.</p>
+            <p class="meta">Beginner &bull; 5 Weeks</p>
+            <a href="#" class="btn">View Course</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://tse3.mm.bing.net/th/id/OIP._X2uG8DtiFSgqf5PYqPnYQHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Database illustration">
+          <div class="card-body">
+            <span class="tag">Data</span>
+            <h3>Databases &amp; SQL</h3>
+            <p>Store, query and organise data using MySQL and simple SQL commands.</p>
+            <p class="meta">Intermediate &bull; 6 Weeks</p>
+            <a href="#" class="btn">View Course</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://i.pinimg.com/originals/13/6a/0b/136a0b657126060524efbeb17699db9c.png" alt="Mobile app illustration">
+          <div class="card-body">
+            <span class="tag">Mobile</span>
+            <h3>Mobile App Basics</h3>
+            <p>Build your first mobile app screens and understand app navigation.</p>
+            <p class="meta">Intermediate &bull; 10 Weeks</p>
+            <a href="#" class="btn">View Course</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.PdVlIyMKVDCtwaxlBXcNsAHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cyber security illustration">
+          <div class="card-body">
+            <span class="tag">Security</span>
+            <h3>Cyber Security Intro</h3>
+            <p>Learn common threats and the habits that keep systems and data safe.</p>
+            <p class="meta">Beginner &bull; 4 Weeks</p>
+            <a href="#" class="btn">View Course</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <p class="footer-brand">LearnLoop Academy</p>
+      <p>Email: bibeky683@gmail.com&nbsp;|&nbsp; Kathmandu, Nepal</p>
+      <p class="copyright">&copy; 2026 LearnLoop Academy. Created for an HTML &amp; CSS assignment.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelector(".nav-links");
+
+    navLinks.addEventListener("click", (event) => {
+      const clickedLink = event.target.closest("a");
+      if (!clickedLink) return;
+
+      navLinks.querySelector(".active")?.classList.remove("active");
+      clickedLink.classList.add("active");
+    });
+  </script>
+</body>
+</html>
